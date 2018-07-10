@@ -16,7 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    UILabel *targetDistinguishLable = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 200, 200)];
+    [self.view addSubview:targetDistinguishLable];
+    
+    //判斷target
+#if BETA
+    targetDistinguishLable.text = @"Version:BETA";
+#endif
+    
+#if RELEASE
+    targetDistinguishLable.text = @"Version:RELEASE";
+#endif
 }
 
 
